@@ -73,7 +73,3 @@ dhcp-option=6,192.168.66.1
 dhcp-authoritative
 EOF
 echo Done.
-echo Restarting...
-#sudo systemctl disable dnsmasq
-sudo shutdown -r -t 00
-
