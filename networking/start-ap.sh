@@ -19,7 +19,7 @@ sudo iptables -t nat -A POSTROUTING -j MASQUERADE
 sudo service hostapd start
 sudo service dnsmasq start
 
-cd server && sudo node ./server/server.js &
+cd server && sudo node ./server.js &
 
 echo Done.
 exit

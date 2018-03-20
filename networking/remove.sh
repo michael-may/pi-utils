@@ -1,6 +1,6 @@
 #!/bin/bash
 echo Removing networking toolset.
-sudo apt-get remove -y hostapd dnsmasq
+sudo apt-get remove -y hostapd dnsmasq nodejs
 sudo apt-get autoremove -y
 
 sudo rm -rf /etc/hostapd/*
