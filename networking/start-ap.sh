@@ -19,7 +19,7 @@ sudo iptables -t nat -A POSTROUTING -j MASQUERADE
 sudo service hostapd start
 sudo service dnsmasq start
 
-cd /home/pi/rfid-musicbox-startup/wifi-configurator && sudo npm start &
+cd sudo node ./server/server.js &
 
 echo Done.
 exit

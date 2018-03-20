@@ -1,6 +1,7 @@
 #!/bin/bash
 echo Installing dependencies.
-sudo apt-get install -y hostapd dnsmasq
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y hostapd dnsmasq nodejs
 
 echo Done.
 echo Writing default hostapd config.

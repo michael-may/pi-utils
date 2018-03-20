@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<meta chaset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#4DA5F4">
+		<title>Wifi Configurator</title>
+		<link rel="stylesheet" href="/css/main.css">
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<i class="fa fa-cube"></i>Wifi Configurator
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<form>
+				<div class="form-group">
+					<label class="mr" for="ssid">Select a Network:</label>
+					<select class="ssiddropdown mr">
+						<option value="">Loading networks...</option>
+					</select>
+					<button class="scan btn btn-default">Rescan</button>
+				</div>
+				<div class="form-group">
+					<label for="ssid">Or manually type one in:</label>
+					<input class="ssid form-control" type="text" name="ssid" placeholder="ex. MyNetworkName"/>
+				</div>
+				<div class="form-group">
+					<label for="pass">Password:</label>
+					<input class="password form-control" type="password" name="pass" placeholder="ex. Network Password"/>
+				</div>
+			</form>
+			<button class="btn btn-primary submit" type="button">Save Changes</button>
+			<p class="errors"></p>
+			<div class="modal saved fade">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button class="close" type="button"><span>×</span></button>
+							<h4 class="title">Wifi Configuration Saved!</h4>
+						</div>
+						<div class="modal-body">
+							<p>Your device will restart within 5 - 10 seconds and attempt to connect to the network. If the device fails, you can reconnect to this screen to try again.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container text-center">
+				<p class="pull-left"></p>
+			</div>
+		</footer>
+		<script src="/js/lib/jquery-3.1.1.min.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>
