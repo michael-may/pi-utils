@@ -1,9 +1,6 @@
 #!/bin/bash
 echo Installing dependencies.
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y hostapd dnsmasq nodejs
-
-cd server && npm i
+sudo apt-get install -y hostapd dnsmasq
 
 echo Done.
 echo Writing default hostapd config.
@@ -75,4 +72,11 @@ dhcp-option=6,192.168.66.1
 # Set the DHCP server to authoritative mode.
 dhcp-authoritative
 EOF
+echo Done.
+
+echo Configuring Nodejs.
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+cd server && npm i && cd ..
 echo Done.
