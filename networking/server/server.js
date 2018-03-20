@@ -41,6 +41,6 @@ app.use((req, res) => {
     res.redirect(301, '/');
 });
 
-let server = app.listen(8080, () => {
+let server = app.listen(80, () => {
 	//console.log('Server started.');
 });
