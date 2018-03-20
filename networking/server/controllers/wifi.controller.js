@@ -65,7 +65,6 @@ network={
 			sysCmd.disableDNSMasq();
 			setTimeout(() => sysCmd.reboot(), 5000);
 		});
-		
 	}
 	catch(err) {
 		res.send({

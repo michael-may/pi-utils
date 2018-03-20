@@ -2,6 +2,7 @@
  * Node modules
  */
 let express = require('express');
+let bodyParser = require('body-parser');
 
 /**
  * Local deps
@@ -9,6 +10,9 @@ let express = require('express');
 let wifiController = require('./controllers/wifi.controller');
 
 let app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Express middleware for options requests
 app.use((req, res, next) => {
@@ -37,6 +41,6 @@ app.use((req, res) => {
     res.redirect(301, '/');
 });
 
-let server = app.listen(80, () => {
+let server = app.listen(8080, () => {
 	//console.log('Server started.');
 });
