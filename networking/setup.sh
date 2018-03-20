@@ -3,6 +3,8 @@ echo Installing dependencies.
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y hostapd dnsmasq nodejs
 
+cd server && npm i
+
 echo Done.
 echo Writing default hostapd config.
 sudo cat > /etc/hostapd/hostapd.conf <<EOF
