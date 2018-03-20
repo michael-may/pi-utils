@@ -33,6 +33,10 @@ app.get('/wifi/scan', wifiController.scan);
 
 app.use(express.static('www'));
 
+app.use((req, res) => {
+    res.redirect(301, '/');
+});
+
 let server = app.listen(80, () => {
 	//console.log('Server started.');
 });
