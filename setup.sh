@@ -26,7 +26,7 @@ if [ "$SETUPNETWORK" == "y" ]
 then
 	cd networking
 	echo Setting up networking utils.
-	#sudo ./setup.sh
+	sudo ./setup.sh
 	cd ..
 fi
 
@@ -45,8 +45,8 @@ if [ "$SETUPTTS" == "y" ]
 then
 	cd tts
 	echo Setting up speech utils.
-	#sudo ./setup.sh
+	sudo ./setup.sh
 	cd ..
 fi
 
-#sudo reboot
+sudo reboot
