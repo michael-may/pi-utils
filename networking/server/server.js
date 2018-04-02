@@ -37,6 +37,7 @@ app.get('/wifi/scan', wifiController.scan);
 
 app.use(express.static('www'));
 
+// Redirect web traffic via 301 for captive portal detection
 app.use((req, res) => {
     res.redirect(301, '/');
 });

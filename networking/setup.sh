@@ -1,4 +1,7 @@
 #!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 echo Installing dependencies.
 sudo apt-get install -y hostapd dnsmasq
 
@@ -73,6 +76,18 @@ dhcp-option=6,192.168.66.1
 dhcp-authoritative
 EOF
 echo Done.
+
+if grep -q -F "##NETWORKCHECKER" ~/.bashrc
+then
+	echo "Network checker daemon already installed."
+else
+	echo "Installing network checker daemon."
+cat >> ~/.bashrc <<EOF
+##NETWORKCHECKER
+cd $DIR && sudo ./network-handler.sh && cd ~
+##NETWORKCHECKER
+EOF
+fi
 
 echo Configuring Nodejs.
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -

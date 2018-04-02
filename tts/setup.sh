@@ -2,7 +2,9 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+echo Installing dependencies.
 sudo apt-get install -y alsa-utils libttspico-utils mplayer
+echo Done.
 
 grep -q -F 'snd_bcm2835' /etc/modules || sudo echo 'snd_bcm2835' >> /etc/modules
 grep -q -F 'nolirc=yes' /etc/mplayer/mplayer.conf || sudo echo 'nolirc=yes' >> /etc/mplayer/mplayer.conf

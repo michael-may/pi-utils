@@ -9,4 +9,7 @@ sudo rmdir /etc/hostapd
 sudo rm -rf /etc/default/hostapd
 
 sudo rm -rf /etc/dnsmasq.conf
+
+sed -i '/##NETWORKCHECKER/,/##NETWORKCHECKER/d' ~/.bashrc
+
 echo Done.
